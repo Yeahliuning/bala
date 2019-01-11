@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*div1设置为弹性盒子,没有（回车自动认为空格）空格的限制
+			 *1.弹性盒子中的元素没有空格间隙
+			 无行块的区别，全被认为是行
+			 *2.弹性盒子中的元素默认都是横排
+			 *3.弹性盒子中的元素好对齐
+			 *4.justify-content:设置水平对齐
+			 *flex-start:居左对齐
+			 *center:居中对齐
+			 *flex-end:居右对齐
+			 *space-between：两端对齐
+			 *space-around:平分剩余空间
+			 * 
+			 * 
+			 * 
+			 * 
+			 *align-items:设置垂直对齐
+			 *           flex-start:居上
+			 *           center:居中
+			 *           flex-end:居下
+			 *           stretch:拉伸（默认）
+			 *  
+			 * */
+			
+			#div1 {
+				display: flex;
+				justify-content: space-between;
+			}
+			#div2
+			{
+				height: 500px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#div3{
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			.item{
+				width: 20%;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			<!--弹性容器-->
+			<span id="s1">依恋集团品牌女装特卖会</span>
+			<span id="s2">剩3天</span>
+		</div>
+		<div id="div2">
+			<img src="img/15420731471304.jpg" />
+			<img src="img/15420731720693.jpg" />
+		</div>
+		<!--1.改变item的宽度的时候，高度默认不会等比缩放，所以会有拉伸效果
+			解决方案：设置弹性盒子的垂直居中为flex-start||flex-end||center
+		    2.弹性盒子的元素默认不换行，如果想让元素换行需要设置一个属性叫flex-wrap:wrap
+		-->
+		<div id="div3">
+			<img class="item" src="img/15420731471304.jpg"  />
+			<img class="item" src="img/15420731720693.jpg" />
+			<img class="item" src="img/15420732017875.jpg" />
+			<img class="item" src="img/15420732274447.jpg" />
+			<img class="item" src="img/15420733296928.jpg" />
+			<img class="item" src="img/15420733666197.jpg" />
+			<img class="item" src="img/15420733912841.jpg" />
+			<img class="item" src="img/15420734196780.jpg" />
+			<img class="item" src="img/15420734442435.jpg" />
+			<img class="item" src="img/15420731471304.jpg" />
+		</div>
+	</body>
+
+</html>
